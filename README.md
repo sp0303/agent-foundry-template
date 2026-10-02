@@ -31,11 +31,20 @@ skills, rules, the flow command, and docs. No product code. You add that.
 |---|---|
 | `AGENTS.md` | Vendor-neutral rules every agent obeys |
 | `CLAUDE.md` | Auto-loaded session bootstrap (team + how to operate) |
-| `.claude/agents/` | Claude subagents (architect, qa-reviewer, security-engineer, ux-ui-designer, skill-curator) — auto-load, tool-scoped |
+| `.claude/agents/` | Claude subagents (architect, qa-reviewer, security-engineer, ux-ui-designer, skill-curator, devops) — auto-load, tool-scoped |
 | `.claude/commands/build-tool.md` | The `/build-tool` end-to-end pipeline command |
 | `.agents/` | Antigravity skills + agent files for the developer role |
 | `agents/` | Human-readable role charters (source of truth for authority) |
-| `docs/` | Architecture and operating guide |
+| `docs/` | Architecture, operating guide, and the release checklist |
+
+## Working rules (learned on the first real project)
+
+- The orchestrating session **never writes product code** — every change goes to
+  the developer through a task contract.
+- The designer keeps `design/` current; QA fails reviews with stale specs.
+- **Run it and look** in the browser preview before review.
+- Publishing goes through the `devops` subagent and
+  [docs/release-checklist.md](docs/release-checklist.md), with your approval.
 
 ## The rule that protects quality
 
